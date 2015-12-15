@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="include/jquery-1.10.2.js" type="application/javascript" language="JavaScript"></script>
+    <script type="application/javascript" lang="javascript">
+//        setInterval(function(){
+            //GetData();
+//        },4000);
+        function GetData(){
+            alert(55);
+            $.ajax({
+                url: 'http://localhost:8001',
+                type: 'GET',
+                data: '',
+                success: function(data) {
+                    alert(555);
+                    },
+                error: function(e) {
+                    alert(e.message);
+                }
+
+            });
+        }
+    </script>
+</head>
+<body onload="GetData();">
+    <div id="div_Test">
+        TEST
+    </div>
+</body>
+</html>
